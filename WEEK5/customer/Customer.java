@@ -1,7 +1,5 @@
 package customer;
 
-// 06_Customer_Class
-
 import cart.ShoppingCart;
 
 public class Customer {
@@ -18,12 +16,10 @@ public class Customer {
         this.cart = new ShoppingCart(); // each customer gets a cart
     }
 
-    // Access customer's cart
     public ShoppingCart getCart() {
         return cart;
     }
 
-    // Display customer details
     public void displayCustomer() {
         System.out.println("\n--- Customer Details ---");
         System.out.println("Customer ID: " + customerId);
