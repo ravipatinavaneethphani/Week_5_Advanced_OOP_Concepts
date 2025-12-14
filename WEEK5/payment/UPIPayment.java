@@ -1,7 +1,5 @@
 package payment;
 
-// 09_UPI_Payment
-
 public class UPIPayment extends Payment {
 
     public UPIPayment(double amount) {
@@ -13,3 +11,4 @@ public class UPIPayment extends Payment {
         System.out.println("Payment of ₹" + amount + " successful via UPI.");
     }
 }
+
