@@ -1,7 +1,5 @@
 package main;
 
-// 10_ECommerce_Main_Class
-
 import product.ElectronicsProduct;
 import product.ClothingProduct;
 import product.BookProduct;
@@ -15,7 +13,6 @@ public class ECommerceApp {
 
     public static void main(String[] args) {
 
-        // Step 1: Create Products
         ElectronicsProduct laptop =
                 new ElectronicsProduct(1, "Laptop", 60000);
 
@@ -25,20 +22,16 @@ public class ECommerceApp {
         BookProduct javaBook =
                 new BookProduct(3, "Java Programming Book", 800);
 
-        // Step 2: Create Customer
         Customer customer =
                 new Customer(101, "Navaneeth", "navaneethphani@gmail.com");
 
-        // Step 3: Add Products to Cart
         customer.getCart().addProduct(laptop);
         customer.getCart().addProduct(tshirt);
         customer.getCart().addProduct(javaBook);
 
-        // Step 4: Place Order
         Order order = new Order(customer);
         order.displayOrderSummary();
-
-        // Step 5: Make Payment
+        
         double amountToPay = customer.getCart().calculateTotal();
         Payment payment = new UPIPayment(amountToPay);
         payment.makePayment();
