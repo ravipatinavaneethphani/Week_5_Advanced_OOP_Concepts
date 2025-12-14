@@ -1,7 +1,5 @@
 package cart;
 
-// 05_Shopping_Cart
-
 import java.util.ArrayList;
 import product.Product;
 
@@ -13,19 +11,16 @@ public class ShoppingCart {
         products = new ArrayList<>();
     }
 
-    // Add product to cart
     public void addProduct(Product product) {
         products.add(product);
         System.out.println(product.getName() + " added to cart.");
     }
 
-    // Remove product from cart
     public void removeProduct(Product product) {
         products.remove(product);
         System.out.println(product.getName() + " removed from cart.");
     }
-
-    // Display cart items
+    
     public void displayCart() {
         System.out.println("\n--- Shopping Cart Items ---");
         for (Product product : products) {
@@ -36,7 +31,7 @@ public class ShoppingCart {
         }
     }
 
-    // Calculate total amount
+    
     public double calculateTotal() {
         double total = 0;
         for (Product product : products) {
