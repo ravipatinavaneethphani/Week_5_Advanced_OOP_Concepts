@@ -1,7 +1,5 @@
 package product;
 
-// 01_Product_Abstract_Class
-
 public abstract class Product {
     protected int productId;
     protected String name;
@@ -33,3 +31,4 @@ public abstract class Product {
         System.out.println("Price: ₹" + price);
     }
 }
+
